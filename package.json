@@ -1,14 +1,18 @@
 {
-  "name": "antora-ui-default",
-  "description": "An archetype project that produces a UI for creating documentation sites with Antora",
-  "homepage": "https://gitlab.com/antora/antora-ui-default",
+  "name": "antora-ui-bootstrap",
+  "description": "A Bootstrap based UI bundle for Antora site generator",
+  "homepage": "https://github.com/anoff/antora-ui-bootstrap",
   "license": "MPL-2.0",
   "repository": {
     "type": "git",
-    "url": "https://gitlab.com/antora/antora-ui-default.git"
+    "url": "https://github.com/anoff/antora-ui-bootstrap.git"
+  },
+  "scripts": {
+    "serve": "gulp preview",
+    "build": "gulp bundle"
   },
   "engines": {
-    "node": ">= 8.0.0"
+    "node": ">= 10.0.0"
   },
   "browserslist": [
     "last 2 versions"
@@ -16,6 +20,7 @@
   "devDependencies": {
     "asciidoctor.js": "1.5.9",
     "autoprefixer": "~9.6",
+    "bootstrap": "^4.3.1",
     "browser-pack-flat": "~3.4",
     "browserify": "~16.2",
     "cssnano": "~4.1",

@@ -1,9 +1,10 @@
-= Antora Default UI
+= Antora Bootstrap UI
 // Settings:
 :experimental:
 :hide-uri-scheme:
 // Project URLs:
-:url-project: https://gitlab.com/antora/antora-ui-default
+:url-default-ui: https://gitlab.com/antora/antora-ui-default
+:url-project: https://github.com/anoff/antora-ui-bootstrap
 :url-preview: https://antora.gitlab.io/antora-ui-default
 :url-ci-pipelines: {url-project}/pipelines
 :img-ci-status: {url-project}/badges/master/pipeline.svg
@@ -185,11 +186,12 @@ The UI bundle will again be available at [.path]_build/ui-bundle.zip_.
 
 == Copyright and License
 
+This UI is based on the link:{url-default-ui}[antora-ui-default] originally licensed under
+----
 Copyright (C) 2017-2019 OpenDevise Inc. and the Antora Project.
 
 Use of this software is granted under the terms of the https://www.mozilla.org/en-US/MPL/2.0/[Mozilla Public License Version 2.0] (MPL-2.0).
 See link:LICENSE[] to find the full license text.
+---
 
-== Authors
-
-Development of Antora is led and sponsored by {url-opendevise}[OpenDevise Inc].
+Any modifications are licensed by Andreas Offenhaeuser under the identical MPL-2.0 license.
