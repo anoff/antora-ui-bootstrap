@@ -1,4 +1,8 @@
+@import "vars.css";
+/* @import "breadcrumbs.css"; */
 @import "doc.css";
+/* @import "page-versions.css"; */
+/* @import "toolbar.css"; */
 
 footer.footer {
   font-size: 0.85rem;
