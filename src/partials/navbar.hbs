@@ -1,0 +1,33 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="{{or site.url (or siteRootUrl siteRootPath)}}">{{site.title}}</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <div class="navbar-nav">
+      {{!-- TODO: figure out if "active" can be set by hbs --}}
+      <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+      <a class="nav-item nav-link" href="#">Features</a>
+      <div class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Products
+        </a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="#">Product A</a>
+          <a class="dropdown-item" href="#">Product B</a>
+          <a class="dropdown-item" href="#">Product C</a>
+        </div>
+      </div>
+      <div class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          References
+        </a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="#">Reference A</a>
+          <a class="dropdown-item" href="#">Reference B</a>
+          <a class="dropdown-item" href="#">Reference C</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>

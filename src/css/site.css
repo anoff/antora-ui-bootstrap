@@ -1,17 +1,17 @@
-@import "typeface-roboto.css";
-@import "typeface-roboto-mono.css";
-@import "vars.css";
-@import "base.css";
-@import "body.css";
-@import "nav.css";
-@import "main.css";
-@import "navigation-menu.css";
-@import "navigation-explore.css";
-@import "toolbar.css";
-@import "breadcrumbs.css";
-@import "page-versions.css";
 @import "doc.css";
-@import "header.css";
-@import "footer.css";
-@import "highlight.css";
-@import "print.css";
+
+footer.footer {
+  font-size: 0.85rem;
+  background-color: var(--gray-dark);
+  color: var(--gray);
+  padding: 0.5rem 1rem;
+}
+
+.footer p {
+  margin: 0.5rem 0;
+}
+
+.footer a {
+  color: var(--gray);
+  text-decoration: underline;
+}
