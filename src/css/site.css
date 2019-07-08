@@ -1,6 +1,7 @@
 @import "vars.css";
 /* @import "breadcrumbs.css"; */
 @import "doc.css";
+/* @import "nav.css"; */
 /* @import "page-versions.css"; */
 /* @import "toolbar.css"; */
 
@@ -18,4 +19,126 @@ footer.footer {
 .footer a {
   color: var(--gray);
   text-decoration: underline;
+}
+
+div.body {
+  display: flex;
+}
+
+main {
+  flex: auto;
+  min-width: 0;
+}
+
+/* NAV TREE */
+/* Style the caret/arrow */
+.caret {
+  cursor: pointer;
+  position: absolute;
+  margin-left: -1.5em;
+  width: 1.5em;
+  height: 1.4em;
+  user-select: none; /* Prevent text selection */
+}
+
+/* Create the caret/arrow with a unicode, and style it */
+.caret::before {
+  content: "\25B6";
+  color: var(--color-text);
+  display: inline-block;
+  margin-right: 6px;
+}
+
+/* Rotate the caret/arrow icon when clicked on (using JavaScript) */
+.caret-down::before {
+  transform: rotate(90deg);
+}
+
+/* Hide the nested list */
+.navtree-nested {
+  display: none;
+  padding-left: 1em;
+}
+
+/* Show the nested list when the user clicks on the caret/arrow (with JavaScript) */
+.is-active {
+  display: block;
+}
+
+.navtree-item {
+  list-style: none;
+  color: var(--color-text);
+
+  margin-top: 0.5em;
+}
+
+/* adds some breathing room below a nested list */
+.navtree-item-toggle ~ .nav-list {
+  padding-bottom: 0.125rem;
+}
+
+/* matches list without a title */
+.navtree-item[data-depth="0"] > .nav-list:first-child {
+  display: block;
+  margin: 0;
+}
+
+.navtree-item:not(.is-active) > .nav-list {
+  display: none;
+}
+
+.navtree-link {
+  color: var(--color-text);
+}
+.nav-container {
+  display: none;
+  position: fixed;
+  top: var(--height-navbar);
+  left: 0;
+  width: 100%;
+  font-size: 0.9375rem;
+  z-index: var(--z-index-nav);
+}
+
+.navtree-container.is-active {
+  display: block;
+}
+
+@media screen and (min-width: 769px) {
+  .navtree-container {
+    width: var(--width-nav);
+    font-size: 0.875rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .navtree-container {
+    font-size: 0.8125rem;
+    flex: none;
+    display: block;
+    position: static;
+    top: 0;
+  }
+}
+
+.navtree {
+  background-color: #fafafa;
+  position: relative;
+  top: var(--height-toolbar);
+  height: var(--height-nav-mobile);
+}
+
+@media screen and (min-width: 769px) {
+  .navtree {
+    box-shadow: 0.5px 0 3px #c1c1c1;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .navtree {
+    top: var(--height-navbar);
+    box-shadow: none;
+    position: sticky;
+    height: var(--height-nav);
+  }
 }
